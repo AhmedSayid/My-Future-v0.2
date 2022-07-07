@@ -169,14 +169,14 @@ function hideMsg() {
     rfUpdateCookie()
 }
 
-var cookie = document.cookie
+// var cookie = document.cookie
 
-setTimeout(function () {
-    var showRfApproveCookie = !__isRfApp;
-    if (cookie && cookie.indexOf(rfApproveCookieKey) === -1 && showRfApproveCookie) {
-        updateCookieMessage('flex')
-    } else {
-        rfUpdateCookie()
-        updateCookieMessage('none')
-    }
-}, 3000)
+// setTimeout(function () {
+//     var showRfApproveCookie = !__isRfApp;
+//     if (cookie && cookie.indexOf(rfApproveCookieKey) === -1 && showRfApproveCookie) {
+//         updateCookieMessage('flex')
+//     } else {
+//         rfUpdateCookie()
+//         updateCookieMessage('none')
+//     }
+// }, 3000)
