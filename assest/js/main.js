@@ -30,6 +30,7 @@ dpm_prof.addEventListener("click", () => {
 function ss() {
   dd.style.display = "none";
 }
+
 /*
 ======================================================
 ==                 login display form               ==
@@ -190,6 +191,8 @@ function reactBox() {
     let love = Array.from(document.getElementsByClassName("love"));
     let comment = Array.from(document.getElementsByClassName("comment"));
     let commnt = Array.from(document.getElementsByClassName("commnt"));
+    let commentInput = Array.from(document.querySelectorAll(".comment-input"));
+    let commentBtn = Array.from(document.querySelectorAll(".comment-btn"));
     like.forEach((e, i) => {
       e.onclick = () => {
         e.style.color = "#0d6efd";
@@ -207,9 +210,18 @@ function reactBox() {
         comment[i].style.display = "block";
       };
     }
+    for (let i = 0; i < commentInput.length; i++) {
+      commentBtn[i].onclick = () => {
+        let val = document.createTextNode(commentInput[i].value);
+        let commentText = Array.from(
+          document.querySelectorAll(".comment-text")
+        );
+        console.log(commentText[i]);
+        commentText[i].appendChild(val);
+      };
+    }
   });
 }
-
 
 // $("#post,input").keyup(function () {
 //   $this = $(this);
